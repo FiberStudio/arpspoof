@@ -210,11 +210,12 @@ void handle_packet(pcap_t *pcap, pcap_pkthdr *header, const uint8_t *data, const
 		memcpy(new_packet, victim_mac, 6);
 		memcpy(new_packet+6, my_mac, 6);
 	}
-
+/*
 	if (pcap_sendpacket(pcap, new_packet, header->len) != 0) {
 		fprintf(stderr, "Error forwarding packet: %s\n", pcap_geterr(pcap));
 		return;
 	}
+*/
 }
 
 void init_npcap_dll_search_path() {
